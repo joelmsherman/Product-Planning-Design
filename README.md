@@ -44,6 +44,28 @@ The components Design OS generates are production-ready React elements styled wi
 
 Your backend can be anything — Rails, Laravel, Next.js API routes, Python, Go, or whatever you prefer. Design OS only handles the frontend design layer.
 
+## Getting Started
+
+```bash
+# Clone from this template
+git clone https://github.com/joelmsherman/Product-Planning-Design.git my-product-design
+cd my-product-design
+
+# Remove the template remote
+git remote remove origin
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
+
+# Open Claude Code and begin
+claude
+```
+
+Then run `/product-vision` to start defining your product.
+
 ## Workflow
 
 Design OS follows a three-phase process. Each phase uses slash commands inside Claude Code that run as interactive conversations — the AI asks questions, you provide direction, and together you shape the product.
@@ -83,11 +105,11 @@ When you're ready — even if not every section is complete — generate a hando
 
 The export produces a `product-plan/` directory containing pre-written prompts, implementation instructions, CSS tokens, TypeScript interfaces, sample data, shell templates, and per-section component deliverables with behavioral test specs.
 
-## Implementation (Incremental Approach)
+### Implementation (Incremental Approach)
 
 The export generates two implementation paths. The **incremental approach** is recommended — it breaks the build into milestones so you can validate as you go rather than debugging a monolithic output.
 
-### How it works
+#### How it works
 
 1. **Start with the foundation milestone.** The export includes a `section-prompt.md` template and milestone-by-milestone instructions. The first milestone sets up your project scaffold, installs dependencies, and configures your design tokens (colors, typography, Tailwind config).
 
@@ -106,36 +128,6 @@ The export generates two implementation paths. The **incremental approach** is r
    - Add error handling and loading states
    - Write tests aligned with the provided specs
 
-### Using the prompts
+#### Using the prompts
 
 Each milestone comes with a pre-written prompt you can feed directly to your coding agent (Claude Code, Cursor, Copilot, etc.). Open the milestone instructions, copy the prompt, and let your agent build that slice. Review, adjust, then move to the next milestone.
-
-## Getting Started
-
-```bash
-# Clone from this template
-git clone https://github.com/joelmsherman/Product-Planning-Design.git my-product-design
-cd my-product-design
-
-# Remove the template remote
-git remote remove origin
-
-# Install dependencies
-npm install
-
-# Start the dev server
-npm run dev
-
-# Open Claude Code and begin
-claude
-```
-
-Then run `/product-vision` to start defining your product.
-
-## Support & Community
-
-For support, training, and community access, consider joining [Builder Methods Pro](https://buildermethods.com/pro) — connect directly with Brian Casel and other builders using Design OS.
-
-- [Builder Briefing newsletter](https://buildermethods.com)
-- [YouTube](https://youtube.com/@briancasel)
-- [Changelog](CHANGELOG.md)
