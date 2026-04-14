@@ -103,31 +103,4 @@ When you're ready — even if not every section is complete — generate a hando
 |---------|---------|
 | `/export-product` | Generate the complete handoff package with implementation instructions, design assets, and test specs |
 
-The export produces a `product-plan/` directory containing pre-written prompts, implementation instructions, CSS tokens, TypeScript interfaces, sample data, shell templates, and per-section component deliverables with behavioral test specs.
-
-### Implementation (Incremental Approach)
-
-The export generates two implementation paths. The **incremental approach** is recommended — it breaks the build into milestones so you can validate as you go rather than debugging a monolithic output.
-
-#### How it works
-
-1. **Start with the foundation milestone.** The export includes a `section-prompt.md` template and milestone-by-milestone instructions. The first milestone sets up your project scaffold, installs dependencies, and configures your design tokens (colors, typography, Tailwind config).
-
-2. **Build the shell.** The second milestone implements your application shell — navigation, layout structure, and routing scaffolding — using the shell component templates from the export.
-
-3. **Implement one section at a time.** Each subsequent milestone corresponds to a product section. For each one, the export provides:
-   - React components (props-based, fully styled with Tailwind, dark mode support)
-   - TypeScript type definitions
-   - Sample data for development
-   - Behavioral test specifications
-   - Screenshots for visual reference
-
-4. **Wire up and integrate.** The exported components are presentation-ready but intentionally decoupled from your backend. Your responsibilities after each milestone:
-   - Connect callbacks to your routing
-   - Replace sample data with backend API calls
-   - Add error handling and loading states
-   - Write tests aligned with the provided specs
-
-#### Using the prompts
-
-Each milestone comes with a pre-written prompt you can feed directly to your coding agent (Claude Code, Cursor, Copilot, etc.). Open the milestone instructions, copy the prompt, and let your agent build that slice. Review, adjust, then move to the next milestone.
+The export produces a `product-plan/` directory containing pre-written prompts, implementation instructions, CSS tokens, TypeScript interfaces, sample data, shell templates, and per-section component deliverables with behavioral test specs. Import this directory directly into the root of a greenfield web application project.  See [this repo](https://github.com/joelmsherman/Next-Supabase-App) to spin one up fast, using Next.js/Supabase! 
